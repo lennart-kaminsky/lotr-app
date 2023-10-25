@@ -25,14 +25,14 @@ export default function VolumeDetail() {
 
       {currentIndex > 0 && (
         <p>
-          <Link href={"./" + volumes[currentIndex - 1].slug}>
+          <Link href={`./${volumes[currentIndex - 1].slug}`}>
             Previous Volume: {volumes[currentIndex - 1].title}{" "}
           </Link>
         </p>
       )}
       {currentIndex < volumes.length - 1 && (
         <p>
-          <Link href={"./" + volumes[currentIndex + 1].slug}>
+          <Link href={`./${volumes[currentIndex + 1].slug}`}>
             {" "}
             Next Volume: {volumes[currentIndex + 1].title}
           </Link>
