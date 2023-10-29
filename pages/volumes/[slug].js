@@ -2,6 +2,8 @@ import Link from "next/link";
 import { volumes } from "@/lib/data";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { StyledLink } from "@/components/Link";
+import { TitleOne } from "@/components/Headlines";
 
 export default function VolumeDetail() {
   const router = useRouter();
@@ -13,9 +15,26 @@ export default function VolumeDetail() {
   return (
     <div>
       <p>
-        <Link href="/">← All Volumes</Link>
+        <StyledLink href="/volumes">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 18L9 12L15 6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          All Volumes
+        </StyledLink>
       </p>
-      <h1>{volume.title}</h1>
+      <TitleOne>{volume.title}</TitleOne>
       <p>{volume.description}</p>
       <ul>
         {volume.books.map((book) => (
